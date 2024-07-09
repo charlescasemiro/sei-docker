@@ -70,11 +70,10 @@ RUN yum -y install \
     php-zip \
     php-pecl-zip \
     git
-    
+
 RUN /tmp/assets/copy-packages.sh
 
-RUN cd /tmp/assets/
-RUN cp ca-certIN.pem /etc/pki/ca-trust/source/anchors/
+RUN cp -v /tmp/assets/ca-certIN.pem /etc/pki/ca-trust/source/anchors/
 RUN update-ca-trust extract
 RUN update-ca-trust enable
 
