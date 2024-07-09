@@ -16,6 +16,9 @@ ENV TERM="xterm" \
 
 ADD assets /tmp/assets
 
+RUN chmod +x /tmp/assets/*.sh
+
 RUN /tmp/assets/copy-packages.sh && \
-    /tmp/assets/install.sh && \
-    rm -rf /tmp/assets
+    /tmp/assets/install.sh
+
+RUN rm -rf /tmp/assets

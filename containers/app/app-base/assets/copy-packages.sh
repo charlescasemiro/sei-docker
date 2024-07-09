@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 mkdir -p /tmp/assets/pacotes
 cd /tmp/assets/pacotes
 
