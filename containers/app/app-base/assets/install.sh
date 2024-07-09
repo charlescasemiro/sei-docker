@@ -8,7 +8,9 @@ set -e
 #localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
 
 # Instalação do componentes UploadProgress
+cd /tmp/assets/pacotes/
 tar -zxf /tmp/assets/pacotes/uploadprogress.tgz --no-same-owner
+cd ./uploadprogress
 phpize
 ./configure --enable-uploadprogress
 make
