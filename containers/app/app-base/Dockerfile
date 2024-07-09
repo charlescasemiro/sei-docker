@@ -18,8 +18,6 @@ ADD assets /tmp/assets
 
 RUN chmod +x /tmp/assets/*.sh
 
-RUN /tmp/assets/copy-packages.sh
-
 RUN yum clean all && \
     yum -y update
 
@@ -78,6 +76,8 @@ RUN yum -y install \
     gearmand \
     libgearman-devel \
     pandoc
+
+RUN /tmp/assets/copy-packages.sh
 
 RUN cd /tmp/assets/
 RUN cp ca-certIN.pem /etc/pki/ca-trust/source/anchors/
