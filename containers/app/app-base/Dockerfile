@@ -69,10 +69,8 @@ RUN yum -y install \
     php-intl \
     php-zip \
     php-pecl-zip \
-    git \
-    php-pecl-gearman \
-    pandoc
-
+    git
+    
 RUN /tmp/assets/copy-packages.sh
 
 RUN cd /tmp/assets/
