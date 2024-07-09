@@ -69,12 +69,8 @@ RUN yum -y install \
     php-intl \
     php-zip \
     php-pecl-zip \
-    gearmand \
-    libgearman \
-    libgearman-devel \
     git \
-    gearmand \
-    libgearman-devel \
+    php-pecl-gearman \
     pandoc
 
 RUN /tmp/assets/copy-packages.sh
