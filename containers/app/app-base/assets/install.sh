@@ -12,7 +12,7 @@ cd /tmp/assets/pacotes/
 tar -zxf /tmp/assets/pacotes/uploadprogress.tgz --no-same-owner
 cd ./uploadprogress
 phpize
-configure --enable-uploadprogress
+./configure --enable-uploadprogress
 make
 make install
 echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
