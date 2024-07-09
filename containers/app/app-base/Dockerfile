@@ -19,6 +19,91 @@ ADD assets /tmp/assets
 RUN chmod +x /tmp/assets/*.sh
 
 RUN /tmp/assets/copy-packages.sh
+
+RUN yum clean all && \
+    yum -y update
+
+# Instalação dos componentes básicos do servidor web apache
+RUN yum -y install \
+    httpd \
+    memcached \
+    openssl \
+    wget \
+    curl \
+    zip \
+    unzip \
+    gcc \
+    java-1.8.0-openjdk \
+    libxml2 \
+    icoutils \
+    libexif \
+    xorg-x11-font-utils \
+    xorg-x11-fonts-75dpi \
+    fontconfig \
+    mod_ssl
+
+# Instalação do PHP e demais extenções necessárias para o projeto
+RUN dnf install -y yum-utils
+
+# Instalação do PHP e demais extenções necessárias para o projeto
+RUN yum -y install \
+    php php-common \
+    php-cli \
+    php-pear \
+    php-bcmath \
+    php-gd \
+    php-gmp \
+    php-intl \
+    php-ldap \
+    php-mbstring \
+    php-odbc \
+    php-pdo \
+    php-pecl-apcu \
+    php-zlib \
+    php-snmp \
+    php-soap \
+    php-xml \
+    php-xmlrpc \
+    php-devel \
+    php-pecl-apcu-devel \
+    php-calendar \
+    php-shmop \
+    php-intl \
+    php-zip \
+    php-pecl-zip \
+    gearmand \
+    libgearman \
+    libgearman-devel \
+    git \
+    gearmand \
+    libgearman-devel \
+    pandoc
+
+RUN cd /tmp/assets/
+RUN cp ca-certIN.pem /etc/pki/ca-trust/source/anchors/
+RUN update-ca-trust extract
+RUN update-ca-trust enable
+
+RUN cd /tmp/assets/pacotes
+
+# Configuração do pacote de línguas pt_BR
+RUN localedef pt_BR -i pt_BR -f ISO-8859-1
+RUN localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
+RUN localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
+
+# Instalação do componentes UploadProgress
+RUN tar -zxvf uploadprogress.tgz
+RUN cd uploadprogress
+RUN phpize
+RUN ./configure --enable-uploadprogress
+RUN make
+RUN make install
+RUN echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
+RUN cd -
+
+# fonts libraries
+RUN rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
+
 RUN /tmp/assets/install.sh
 
 RUN rm -rf /tmp/assets
