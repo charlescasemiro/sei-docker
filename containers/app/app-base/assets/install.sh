@@ -20,7 +20,8 @@ yum -y install \
     gcc \
     java-1.8.0-openjdk \
     libxml2 \
-    cabextract \
+    icoutils \
+    libexif \
     xorg-x11-font-utils \
     xorg-x11-fonts-75dpi \
     fontconfig \
