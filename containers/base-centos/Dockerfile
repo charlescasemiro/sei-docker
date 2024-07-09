@@ -2,4 +2,4 @@
 # SO Centos Oficial - apenas redundancia do repo oficial
 ################################################################################
 
-FROM centos:7
+FROM docker.io/redhat/ubi8:latest

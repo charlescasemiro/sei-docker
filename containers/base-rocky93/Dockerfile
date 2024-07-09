@@ -2,4 +2,4 @@
 # SO Centos 9.3 - apenas redundancia do repo oficial
 ################################################################################
 
-FROM rockylinux:9.3
+FROM docker.io/redhat/ubi8:latest
