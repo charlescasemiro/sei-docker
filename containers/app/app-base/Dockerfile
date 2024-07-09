@@ -78,8 +78,8 @@ RUN update-ca-trust extract
 RUN update-ca-trust enable
 
 # Instalação do componentes UploadProgress
-RUN tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz
-RUN cd /tmp/assets/pacotes/uploadprogress
+RUN tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz 
+RUN chmod a+rwx /tmp/assets/pacotes/uploadprogress
 RUN phpize
 RUN ./configure --enable-uploadprogress
 RUN make
