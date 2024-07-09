@@ -2,7 +2,7 @@
 # Dockerfile de construcao do container APP com os pacotes basicos
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-centos7:latest
+ARG IMAGEM_BASE=docker.io/redhat/ubi8:latest
 
 FROM ${IMAGEM_BASE}
 
