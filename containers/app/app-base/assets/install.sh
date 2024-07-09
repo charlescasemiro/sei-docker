@@ -28,9 +28,10 @@ yum -y install \
     mod_ssl
 
 # Instalação do PHP e demais extenções necessárias para o projeto
-yum install -y epel-release yum-utils
-yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum-config-manager --enable remi-php73
+dnf install -y yum-utils
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+dnf module install php:remi-7.4
 yum -y update
 
 # Instalação do PHP e demais extenções necessárias para o projeto
