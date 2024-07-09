@@ -9,7 +9,7 @@ set -e
 
 # Instalação do componentes UploadProgress
 tar -zxf /tmp/assets/pacotes/uploadprogress.tgz --no-same-owner
-phpize
+/usr/bin/phpize
 ./configure --enable-uploadprogress
 make
 make install
