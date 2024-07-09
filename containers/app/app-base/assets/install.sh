@@ -7,6 +7,17 @@ localedef pt_BR -i pt_BR -f ISO-8859-1
 localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
 localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
 
+# Instalação do componentes UploadProgress
+tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz 
+phpize
+./configure --enable-uploadprogress
+make
+make install
+echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
+
+# fonts libraries
+rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
+
 
 if [ "$IMAGEM_APP_PACOTEMYSQL_PRESENTE" == "true" ]; then
 

@@ -79,17 +79,6 @@ RUN cp -v /tmp/assets/ca-certIN.pem /etc/pki/ca-trust/source/anchors/
 RUN update-ca-trust extract
 RUN update-ca-trust enable  
 
-# Instalação do componentes UploadProgress
-RUN tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz 
-RUN chmod a+rwx /tmp/assets/pacotes/uploadprogress
-RUN phpize
-RUN ./configure --enable-uploadprogress
-RUN make
-RUN make install
-RUN echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
-
-# fonts libraries
-RUN rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
 
 RUN /tmp/assets/install.sh
 
