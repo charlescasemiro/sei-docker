@@ -40,41 +40,31 @@ yum -y install \
     php-bcmath \
     php-gd \
     php-gmp \
-    php-imap \
     php-intl \
     php-ldap \
     php-mbstring \
     php-odbc \
     php-pdo \
     php-pecl-apcu \
-    php-pspell \
     php-zlib \
     php-snmp \
     php-soap \
     php-xml \
     php-xmlrpc \
-    php-zts \
     php-devel \
     php-pecl-apcu-devel \
-    php-pecl-memcache \
     php-calendar \
     php-shmop \
     php-intl \
-    php-mcrypt \
     php-zip \
     php-pecl-zip \
     gearmand \
     libgearman \
     libgearman-devel \
-    php-pecl-gearman \
-    vixie-cron \
-    php-sodium \
     git \
     gearmand \
-    libgearman-dev \
     libgearman-devel \
-    pandoc* \
-    texlive*
+    pandoc
 
 cd /tmp/assets/
 cp ca-certIN.pem /etc/pki/ca-trust/source/anchors/
