@@ -79,11 +79,6 @@ RUN update-ca-trust enable
 
 RUN cd /tmp/assets/pacotes
 
-# Configuração do pacote de línguas pt_BR
-RUN localedef pt_BR -i pt_BR -f ISO-8859-1
-RUN localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
-RUN localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
-
 # Instalação do componentes UploadProgress
 RUN tar -zxvf uploadprogress.tgz
 RUN cd uploadprogress

@@ -2,6 +2,12 @@
 
 set -e
 
+# Configuração do pacote de línguas pt_BR
+localedef pt_BR -i pt_BR -f ISO-8859-1
+localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
+localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
+
+
 if [ "$IMAGEM_APP_PACOTEMYSQL_PRESENTE" == "true" ]; then
 
   yum install -y mysql php-mysqli
