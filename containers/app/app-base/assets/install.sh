@@ -31,8 +31,6 @@ yum -y install \
 dnf install -y yum-utils
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
-#dnf module install php:remi-7.4
-yum -y update
 
 # Instalação do PHP e demais extenções necessárias para o projeto
 yum -y install \
@@ -74,7 +72,9 @@ yum -y install \
     git \
     gearmand \
     libgearman-dev \
-    libgearman-devel
+    libgearman-devel \
+    pandoc* \
+    texlive*
 
 cd /tmp/assets/
 cp ca-certIN.pem /etc/pki/ca-trust/source/anchors/
@@ -99,7 +99,7 @@ echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
 cd -
 
 # wkhtml
-rpm -Uvh wkhtmltox-0.12.6-1.centos7.x86_64.rpm
+# rpm -Uvh wkhtmltox-0.12.6-1.centos7.x86_64.rpm
 
 # fonts libraries
 rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
