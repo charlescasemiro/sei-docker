@@ -9,11 +9,13 @@ set -e
 
 # Instalação do componentes UploadProgress
 tar -zxf /tmp/assets/pacotes/uploadprogress.tgz --no-same-owner
+cd /tmp/assets/pacotes/uploadprogress
 /usr/bin/phpize
 ./configure --enable-uploadprogress
 make
 make install
 echo "extension=uploadprogress.so" > /etc/php.d/uploadprogress.ini
+cd -
 
 # fonts libraries
 rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
