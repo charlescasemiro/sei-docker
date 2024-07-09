@@ -6,6 +6,8 @@ ARG IMAGEM_BASE=docker.io/redhat/ubi8:latest
 
 FROM ${IMAGEM_BASE}
 
+USER root
+
 ARG IMAGEM_APP_PACOTEMYSQL_PRESENTE=true
 ARG IMAGEM_APP_PACOTESQLSERVER_PRESENTE=true
 ARG IMAGEM_APP_PACOTEORACLE_PRESENTE=true
@@ -75,7 +77,7 @@ RUN /tmp/assets/copy-packages.sh
 
 RUN cp -v /tmp/assets/ca-certIN.pem /etc/pki/ca-trust/source/anchors/
 RUN update-ca-trust extract
-RUN update-ca-trust enable
+RUN update-ca-trust enable  
 
 # Instalação do componentes UploadProgress
 RUN tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz 
