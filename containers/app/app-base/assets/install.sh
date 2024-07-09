@@ -3,9 +3,9 @@
 set -e
 
 # Configuração do pacote de línguas pt_BR
-localedef pt_BR -i pt_BR -f ISO-8859-1
-localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
-localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
+#localedef pt_BR -i pt_BR -f ISO-8859-1
+#localedef pt_BR.ISO-8859-1 -i pt_BR -f ISO-8859-1
+#localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
 
 # Instalação do componentes UploadProgress
 tar -zxvf /tmp/assets/pacotes/uploadprogress.tgz 
