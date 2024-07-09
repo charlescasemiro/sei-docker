@@ -18,7 +18,7 @@ ADD assets /tmp/assets
 
 RUN chmod +x /tmp/assets/*.sh
 
-RUN /tmp/assets/copy-packages.sh && \
-    /tmp/assets/install.sh
+RUN /tmp/assets/copy-packages.sh
+RUN /tmp/assets/install.sh
 
 RUN rm -rf /tmp/assets
