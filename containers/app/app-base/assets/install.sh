@@ -30,6 +30,7 @@ yum -y install \
 # Instalação do PHP e demais extenções necessárias para o projeto
 dnf install -y yum-utils
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+subscription-manager repos --enable rhel-8-for-x86_64-baseos-rpms --enable rhel-8-for-x86_64-appstream-rpms
 # dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
 # Instalação do PHP e demais extenções necessárias para o projeto
