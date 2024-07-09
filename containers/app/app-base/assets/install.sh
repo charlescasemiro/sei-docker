@@ -104,7 +104,7 @@ fi
 if [ "$IMAGEM_APP_PACOTESQLSERVER_PRESENTE" == "true" ]; then
 
     # Instalação dos componentes de conexão do SQL Server
-    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+    curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
     ACCEPT_EULA=Y yum install -y msodbcsql17
     yum install -y libtool-ltdl-devel libodbc1 unixODBC unixODBC-devel php-mssql php-pdo
     pecl channel-update pecl.php.net
@@ -123,16 +123,16 @@ if [ "$IMAGEM_APP_PACOTEORACLE_PRESENTE" == "true" ]; then
 
     # ORACLE oci
 
-    yum install -y \
-        oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm \
-        oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm \
-        oracle-instantclient12.2-sqlplus-12.2.0.1.0-1.x86_64.rpm
+    unzip instantclient-precomp-linux.leppc64.c64-19.3.0.0.0dbru.zip -d /opt/
+    unzip instantclient-basic-aix.ppc64-19.23.0.0.0dbru.zip -d /opt/
+    unzip instantclient-sdk-aix.ppc64-19.23.0.0.0dbru.zip -d /opt/
+    unzip instantclient-sqlplus-aix.ppc64-19.23.0.0.0dbru.zip -d /opt/
 
     echo /usr/lib/oracle/12.2/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf
     ldconfig
 
     # Install Oracle extensions
-    yum install -y php-dev php-pear build-essential systemtap-sdt-devel
+    yum install -y php-devel php-pear systemtap-sdt-devel
     pecl channel-update pecl.php.net
     export PHP_DTRACE=yes && pecl install oci8-2.2.0 && unset PHP_DTRACE
 
@@ -142,7 +142,7 @@ fi
 
 if [ "$IMAGEM_APP_PACOTEPOSTGRES_PRESENTE" == "true" ]; then
 
-   yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+   yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-ppc64le/pgdg-redhat-repo-latest.noarch.rpm
    yum install -y postgresql15 postgresql15-libs php-pgsql php-pecl-pq
 
 fi
