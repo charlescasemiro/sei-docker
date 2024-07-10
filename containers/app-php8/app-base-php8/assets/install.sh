@@ -29,7 +29,7 @@ dnf install -y https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-releas
 cd /tmp/assets/pacotes
 
 # Instala��o do componentes UploadProgress
-tar -zxvf uploadprogress_2.tar.gz --no-same-owner
+tar -zxvf /tmp/assets/pacotesuploadprogress_2.tar.gz --no-same-owner
 cd uploadprogress_2
 phpize
 ./configure --enable-uploadprogress
