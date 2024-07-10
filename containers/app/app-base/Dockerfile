@@ -49,6 +49,7 @@ RUN dnf install -y yum-utils
 # Instalação do PHP e demais extenções necessárias para o projeto
 RUN yum -y install \
     php php-common \
+    libpq \
     php-cli \
     php-pear \
     php-bcmath \
