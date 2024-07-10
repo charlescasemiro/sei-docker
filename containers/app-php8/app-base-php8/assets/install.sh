@@ -42,6 +42,7 @@ cd -
 rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
 
 mkdir /opt2
+mkdir -p /opt/remi
 cd /opt && tar -cvzf remi.tgz remi
 mv remi.tgz /opt2
 cd -
