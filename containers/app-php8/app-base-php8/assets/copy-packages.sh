@@ -14,6 +14,6 @@ curl -L -O \
     -O \
     https://github.com/charlescasemiro/sei-docker-binarios/blob/main/pacoteslinux/instantclient-sqlplus-aix.ppc64-19.23.0.0.0dbru.zip \
     -O \
-    https://github.com/charlescasemiro/sei-docker-binarios/blob/main/pacoteslinux/uploadprogress-2.0.2.tgz \
+    https://github.com/charlescasemiro/sei-docker-binarios/blob/main/pacoteslinux/uploadprogress_2.tar.gz \
 
 cd -
