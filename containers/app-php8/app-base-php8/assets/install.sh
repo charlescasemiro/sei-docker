@@ -41,9 +41,6 @@ cd -
 # fonts libraries
 rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
 
-# wkhtml
-rpm -Uvh wkhtmltox-0.12.6.1-2.almalinux9.x86_64.rpm
-
 mkdir /opt2
 cd /opt && tar -cvzf remi.tgz remi
 mv remi.tgz /opt2
