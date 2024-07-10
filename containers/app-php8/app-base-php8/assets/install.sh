@@ -24,7 +24,6 @@ localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
 
 dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 dnf install -y https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
-dnf install -y ffmpeg rubberband-3.1.3-2 
 
 
 cd /tmp/assets/pacotes
