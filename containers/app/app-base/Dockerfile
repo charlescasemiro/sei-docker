@@ -40,7 +40,8 @@ RUN yum -y install \
     xorg-x11-font-utils \
     xorg-x11-fonts-75dpi \
     fontconfig \
-    mod_ssl
+    mod_ssl \
+    make
 
 # Instalação do PHP e demais extenções necessárias para o projeto
 RUN dnf install -y yum-utils
