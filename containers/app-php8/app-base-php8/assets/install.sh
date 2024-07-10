@@ -41,11 +41,6 @@ cd -
 # fonts libraries
 rpm -Uvh msttcore-fonts-2.0-3.noarch.rpm
 
-mkdir /opt2
-mkdir -p /opt/remi
-cd /opt && tar -cvzf remi.tgz remi
-mv remi.tgz /opt2
-cd -
 
 if [ "$IMAGEM_APP_PACOTEMYSQL_PRESENTE" == "true" ]; then
 
@@ -74,8 +69,8 @@ if [ "$IMAGEM_APP_PACOTEORACLE_PRESENTE" == "true" ]; then
 
     # ORACLE oci
 
-    yum install -y oracle-instantclient-basic-21.12.0.0.0-1.el9.x86_64.rpm
-    yum install -y oracle-instantclient-devel-21.12.0.0.0-1.el9.x86_64.rpm
+    yum install -y 
+    yum install -y 
 
     rm -rf oracle-instantclient-basic-21.12.0.0.0-1.el9.x86_64.rpm oracle-instantclient-devel-21.12.0.0.0-1.el9.x86_64.rpm
 
