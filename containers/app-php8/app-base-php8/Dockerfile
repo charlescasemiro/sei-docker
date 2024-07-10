@@ -2,13 +2,13 @@
 # Dockerfile de construcao do container APP com os pacotes basicos
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-rocky93:latest
+ARG IMAGEM_BASE=docker.io/php:8.2.21-fpm-alpine
 
 FROM ${IMAGEM_BASE}
 
 ARG IMAGEM_APP_PACOTEMYSQL_PRESENTE=true
-ARG IMAGEM_APP_PACOTESQLSERVER_PRESENTE=true
-ARG IMAGEM_APP_PACOTEORACLE_PRESENTE=true
+ARG IMAGEM_APP_PACOTESQLSERVER_PRESENTE=false
+ARG IMAGEM_APP_PACOTEORACLE_PRESENTE=false
 ARG IMAGEM_APP_PACOTEPOSTGRES_PRESENTE=true
 
 ENV TERM="xterm" \

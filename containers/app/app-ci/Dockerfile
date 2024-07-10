@@ -2,7 +2,7 @@
 # Dockerfile de construcao do container APP com os pacotes basicos
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-app:latest
+ARG IMAGEM_BASE=docker.io/library/base-app:latest
 
 FROM ${IMAGEM_BASE}
 

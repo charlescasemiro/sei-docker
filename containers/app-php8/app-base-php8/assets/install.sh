@@ -4,16 +4,14 @@ set -e
 
 yum update -y
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm
 
-dnf module install -y php:remi-8.2
-yum install --skip-broken -y httpd memcached openssl wget zip unzip gcc \
-                             java-1.8.0-openjdk libxml2 cabextract fontconfig mod_ssl vim procps
+yum install --skip-broken -y httpd memcached openssl wget zip unzip gcc make \
+                             java-1.8.0-openjdk libxml2 fontconfig mod_ssl vim procps
 
-dnf install --skip-broken -y php php-cli php-common php-pear php-bcmath php-gd php-gmp php-imap php-intl     php-ldap     php-mbstring     php-odbc     php-pdo     php-pecl-apcu     php-pspell     php-zlib     php-snmp     php-soap     php-xml     php-xmlrpc     php-zts     php-devel     php-pecl-apcu-devel     php-pecl-memcache     php-calendar     php-shmop     php-intl     php-mcrypt     php-zip     php-pecl-zip
-dnf install -y php-pecl-gearman
-dnf install --skip-broken -y libgearman libgearman-devel php-sodium  git gearmand libgearman-dev libgearman-devel
+dnf install --skip-broken -y php php-cli php-common php-pear php-bcmath php-gd php-gmp php-imap php-intl php-ldap php-mbstring php-odbc php-pdo php-pecl-apcu php-pspell php-zlib php-snmp     php-soap     php-xml     php-xmlrpc     php-zts     php-devel     php-pecl-apcu-devel     php-pecl-memcache     php-calendar     php-shmop     php-intl     php-mcrypt     php-zip     php-pecl-zip
+dnf install -y php-pecl-gearman libgearman
+dnf install --skip-broken -y php-sodium  git gearmand
 
 yum install -y xorg-x11-fonts-75dpi
 
@@ -31,7 +29,7 @@ dnf install -y ffmpeg
 
 cd /tmp/assets/pacotes
 
-# Instalação do componentes UploadProgress
+# Instalaï¿½ï¿½o do componentes UploadProgress
 tar -zxvf uploadprogress-2.0.2.tgz
 cd uploadprogress-2.0.2
 phpize
