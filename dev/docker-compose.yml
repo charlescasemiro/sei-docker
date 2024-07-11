@@ -1,23 +1,23 @@
 version: '2'
 services:
   jod:  
-    image: ${DOCKER_REGISTRY}/jod:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/jod:${ENVIRONMENT_VERSION}
     container_name: jod
 
   smtp:
-    image: ${DOCKER_REGISTRY}/mailcatcher:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/mailcatcher:${ENVIRONMENT_VERSION}
     container_name: smtp
     ports:
       - "1080:1080"
 
   memcached:
-    image: ${DOCKER_REGISTRY}/memcached:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/memcached:${ENVIRONMENT_VERSION}
     container_name: memcached
     ports:
       - "11211:11211"
 
   database:
-    image: ${DOCKER_REGISTRY}/${DATABASE_IMAGE}:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/${DATABASE_IMAGE}:${ENVIRONMENT_VERSION}
     container_name: ${DATABASE_HOST}
     restart: always
     volumes:
@@ -26,13 +26,13 @@ services:
       - ${DATABASE_PORT}:${DATABASE_PORT}
 
   solr:
-    image: ${DOCKER_REGISTRY}/${SOLR_IMAGE}:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/${SOLR_IMAGE}:${ENVIRONMENT_VERSION}
     container_name: solr
     ports:
       - "8983:8983"
 
   httpd:
-    image: ${DOCKER_REGISTRY}/${APP_IMAGE}:${ENVIRONMENT_VERSION}
+    image: ${REGISTRY}/${APP_IMAGE}:${ENVIRONMENT_VERSION}
     container_name: httpd
     restart: always
     ports:
