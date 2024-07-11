@@ -2,9 +2,9 @@
 
 set -e
 
-yum -y update
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py
 
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python3
+python3 get-pip.py
 
 
 #Instalação Supervisor
