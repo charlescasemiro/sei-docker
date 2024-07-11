@@ -10,7 +10,7 @@ define GIT_USERPASSMSG
 Var GITUSER_REPO_MODULOS ou GITPASS_REPO_MODULOS nao definida.
 Faca o export delas com o seu user do github para baixar os modulos
 
-export GITUSER_REPO_MODULOS=seuusergithub
+export GITUSER_REPO_MODULOS=charlescasemiro
 export GITPASS_REPO_MODULOS=seutokengithubparapull
 
 Depois disso rode o comando novamente..
