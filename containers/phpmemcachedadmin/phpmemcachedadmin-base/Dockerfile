@@ -2,4 +2,4 @@
 # phpmemcachedadmin - apenas redundancia do repo original
 ################################################################################
 
-FROM processoeletronico/sei4-phpmemcachedadmin1.2.2:1.0.0
+FROM moonbuggy2000/phpmemcachedadmin:1.3.0-ppc64le

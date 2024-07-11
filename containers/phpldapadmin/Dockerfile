@@ -2,4 +2,4 @@
 # phpldapadmin - apenas redundancia do repo original
 ################################################################################
 
-FROM osixia/phpldapadmin:0.9.0
+FROM laineil/phpldapadmin:0.9.0
