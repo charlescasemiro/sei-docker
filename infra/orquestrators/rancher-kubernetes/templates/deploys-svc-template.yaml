@@ -40,7 +40,7 @@ spec:
         servico: memcached
     spec:
       containers:
-      - image: ${DOCKER_IMAGE_MEMCACHED}
+      - image: image-registry.openshift-image-registry.svc:5000/sei-container/memcache:latest
         imagePullPolicy: Always
         name: memcached
         #resources: #kb_resources
@@ -102,7 +102,7 @@ spec:
         servico: jod
     spec:
       containers:
-      - image: ${DOCKER_IMAGE_JOD}
+      - image: image-registry.openshift-image-registry.svc:5000/sei-container/jod:latest
         imagePullPolicy: Always
         name: jod
         #resources: #kb_resources
@@ -176,7 +176,7 @@ spec:
         - secretRef:
             name: sei-secret1
             optional: false
-        image: ${DOCKER_IMAGE_APP}
+        image: image-registry.openshift-image-registry.svc:5000/sei-container/app-ci:latest
         imagePullPolicy: Always
         name: sei-app
         livenessProbe:
@@ -277,7 +277,7 @@ spec:
         - secretRef:
             name: sei-secret1
             optional: false
-        image: ${DOCKER_IMAGE_APP_AGENDADOR}
+        image: image-registry.openshift-image-registry.svc:5000/sei-container/app-ci-agendador
         imagePullPolicy: Always
         name: sei-app
         #resources: #kb_resources
