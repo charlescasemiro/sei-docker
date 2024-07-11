@@ -16,7 +16,7 @@ metadata:
   name: ing-sei
 spec:
   rules:
-  - host: ${APP_HOST}
+  - host: "${APP_HOST}"
     http:
       paths:
       - backend:
