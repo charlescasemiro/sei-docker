@@ -2,7 +2,7 @@
 
 set -e
 
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
 
 python3 get-pip.py
 
