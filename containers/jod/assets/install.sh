@@ -4,7 +4,7 @@
 localedef pt_BR -i pt_BR -f ISO-8859-1
 
 # Instalação do utilitários necessários para o provisionamento
-yum -y install unzip java-1.7.0-openjdk wget unzip libreoffice libreoffice-headless
+yum update -y && yum -y install zip unzip java-1.8.0-openjdk wget libreoffice libreoffice-headless
 
 # Instalação da api de serviços de conversão de documentos
 unzip /jodconverter-tomcat-2.2.2.zip -d /opt

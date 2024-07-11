@@ -16,7 +16,7 @@ metadata:
   name: ing-sei
 spec:
   rules:
-  - host: "${APP_HOST}"
+  - host: localhost
     http:
       paths:
       - backend:
@@ -28,5 +28,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - "${APP_HOST}"
+    - localhost
     #secretName: tls-sei1
