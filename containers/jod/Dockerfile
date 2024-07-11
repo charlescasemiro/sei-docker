@@ -6,6 +6,7 @@ ARG IMAGEM_BASE=library/base-ubi8:latest
 
 FROM ${IMAGEM_BASE}
 
+USER root
 ############################# INÍCIO DA INSTALAÇÃO #############################
 ENV TERM xterm
 

@@ -16,5 +16,6 @@ rm -rf /var/cache/yum
 
 # Configuração de permissões de execução no script de inicialização do container
 chmod +x /entrypoint.sh
+chmod 777 /opt/
 
 exit 0
