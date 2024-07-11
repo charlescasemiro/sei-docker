@@ -2,4 +2,4 @@
 # Traefik - apenas redundancia do repo original
 ################################################################################
 
-FROM traefik:v3.0
+FROM docker.io/traefik:latest
