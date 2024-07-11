@@ -25,7 +25,7 @@ RUN sed -i '1i use sei; \n' /docker-entrypoint-initdb.d/2_sei_4_0_0_BD_Ref_Exec.
 RUN sed -i '1i use sip; \n' /docker-entrypoint-initdb.d/3_sip_4_0_0_BD_Ref_Exec.sql
 
 RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/docker-entrypoint.sh"]
-RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--datadir", "/initialized-db"]
+RUN ["/usr/local/bin/docker-entrypoint.sh", "/usr/bin/mysqld", "--datadir", "/initialized-db"]
 
 
 ############################## FIM DA INSTALAÇÃO ###########################
