@@ -10,7 +10,7 @@ yum -y update && yum -y install lsof curl wget java-1.8.0-openjdk
 rpm -Uvh /tmp/msttcore-fonts-2.0-3.noarch.rpm
 
 # Configuração do pacote de línguas pt_BR
-localedef pt_BR -i pt_BR -f ISO-8859-1
+#localedef pt_BR -i pt_BR -f ISO-8859-1
 
 # join splited solr
 cat /tmp/solr-8.2.0.tgz.part* > /tmp/solr-8.2.0.tgz
