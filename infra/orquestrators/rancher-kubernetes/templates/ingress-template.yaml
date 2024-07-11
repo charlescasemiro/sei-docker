@@ -28,5 +28,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - ${APP_HOST}
+    - "${APP_HOST}"
     #secretName: tls-sei1
