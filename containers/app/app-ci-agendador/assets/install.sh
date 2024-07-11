@@ -4,13 +4,6 @@ set -e
 
 yum -y update
 
-yum install -y \
-	cronie \
-	gearmand \
-	libgearman \
-	libgearman-devel \
-	php-pecl-gearman
-
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
 
 
