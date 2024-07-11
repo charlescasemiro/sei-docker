@@ -16,9 +16,12 @@ ARG GIT_DB_REF=https://github.com/spbgovbr/sei-db-ref-executivo/raw/master
 
 ############################# INÍCIO DA INSTALACAO #############################
 ENV POSTGRES_PASSWORD=P@ssword \
+    POSTGRES_USER=postgres \
     POSTGRES_HOST_AUTH_METHOD=scram-sha-256 \
     POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256 \
     PGDATA=/initialized-db
+
+RUN chmod 777 /var/lib/postgresql/data
 
 ADD ${GIT_DB_REF}/postgresql/v${VERSAO_BASE}/sei_${NOME_FILE}_BD_Ref_Exec.sql \
     ${GIT_DB_REF}/postgresql/v${VERSAO_BASE}/sip_${NOME_FILE}_BD_Ref_Exec.sql \
@@ -51,7 +54,7 @@ RUN mv /tmp/postgres.conf /etc/postgresql/postgresql.conf && \
 #RUN sed -i '1i \\\c sei; \n' /docker-entrypoint-initdb.d/2_sei_4_0_0_BD_Ref_Exec.sql
 #RUN sed -i '1i \\\c sip; \n' /docker-entrypoint-initdb.d/3_sip_4_0_0_BD_Ref_Exec.sql
 
-# RUN su postgres -c "initdb -D /initialized-db"
+#RUN su postgres -c "initdb -D /initialized-db"
 RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/docker-entrypoint.sh"]
 RUN ["/usr/local/bin/docker-entrypoint.sh", "postgres"]
 
