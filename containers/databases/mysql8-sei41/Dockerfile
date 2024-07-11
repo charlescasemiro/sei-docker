@@ -3,7 +3,7 @@
 # construa antes a imagem base
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-mysql8:latest
+ARG IMAGEM_BASE=library/base-mysql8:latest
 
 FROM ${IMAGEM_BASE} as builder
 

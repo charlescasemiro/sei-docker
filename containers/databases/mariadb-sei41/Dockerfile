@@ -3,7 +3,7 @@
 # construa antes a imagem base
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-mariadb10.5:latest
+ARG IMAGEM_BASE=library/base-mariadb10.5:latest
 
 FROM ${IMAGEM_BASE} as builder
 

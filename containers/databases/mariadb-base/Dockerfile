@@ -2,4 +2,4 @@
 # Mariadb Oficial - apenas redundancia do repo oficial
 ################################################################################
 
-FROM mariadb:10.5
+FROM docker.io/mariadb:latest
