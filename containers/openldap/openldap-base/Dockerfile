@@ -2,4 +2,4 @@
 # openldap - apenas redundancia do repo original
 ################################################################################
 
-FROM osixia/openldap:1.2.2
+FROM docker.io/botsudo/docker-openldap:latest

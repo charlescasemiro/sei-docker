@@ -2,4 +2,4 @@
 # Memcached Oficial - apenas redundancia do repo oficial
 ################################################################################
 
-FROM memcached:latest
+FROM docker.io/memcached:latest

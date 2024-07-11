@@ -1,4 +1,4 @@
-ARG IMAGEM_BASE=processoeletronico/openldap-base:latest
+ARG IMAGEM_BASE=library/openldap-base:latest
 
 FROM ${IMAGEM_BASE}
 
