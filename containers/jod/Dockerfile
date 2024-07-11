@@ -2,7 +2,7 @@
 # Dockerfile de construção do container JOD utilizado pelo SEI
 ################################################################################
 
-ARG IMAGEM_BASE=library/base-centos7:latest
+ARG IMAGEM_BASE=library/base-ubi8:latest
 
 FROM ${IMAGEM_BASE}
 

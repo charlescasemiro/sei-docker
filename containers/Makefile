@@ -154,7 +154,7 @@ erase-conteiner-generic: verificar-conteiner-imagem-rodando
 
 
 erase-conteiner-base-centos: ## apagar a imagem base-centos
-		@make IMAGEMTMP=base-centos7 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) erase-conteiner-generic
+		@make IMAGEMTMP=base-ubi8 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) erase-conteiner-generic
 
 erase-conteiner-base-rocky93: ## apagar a imagem base-centos
 		@make IMAGEMTMP=base-rocky93 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) erase-conteiner-generic
@@ -306,7 +306,7 @@ build-conteiner-generic: verificar-docker-registry verificar-parametro-imagemtmp
 
 
 build-conteiner-base-centos: ## construir imagem base-centos
-		@make IMAGEMTMP=base-centos7 \
+		@make IMAGEMTMP=base-ubi8 \
 		      IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) \
 					IMAGEMTMP_PATH=base-centos \
 					build-conteiner-generic
@@ -630,7 +630,7 @@ publish-container-generic: verificar-docker-registry verificar-parametro-imagemt
 
 
 publish-container-base-centos: ## publicar imagem base-centos
-		@make IMAGEMTMP=base-centos7 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) publish-container-generic
+		@make IMAGEMTMP=base-ubi8 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) publish-container-generic
 
 publish-container-base-rocky93: ## publicar imagem base-rocky93
 		@make IMAGEMTMP=base-rocky93 IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) publish-container-generic
