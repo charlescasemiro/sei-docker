@@ -4,7 +4,7 @@ set -e
 
 yum -y update && yum -y install lsof wget glibc-locale-source procps bc
 
-localedef pt_BR -i pt_BR -f ISO-8859-1
+#localedef pt_BR -i pt_BR -f ISO-8859-1
 
 dnf -y install java-17-openjdk
 
