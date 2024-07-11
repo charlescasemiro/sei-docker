@@ -12,7 +12,7 @@ ARG GIT_DB_REF=https://github.com/spbgovbr/sei-db-ref-executivo/raw/master
 ############################# INÍCIO DA INSTALAÇÃO #############################
 ENV MYSQL_ROOT_PASSWORD=P@ssword
 
-RUN service mysqld start
+RUN sudo service mysqld start
 
 COPY assets/my.cnf /etc/mysql/mariadb.conf.d/sei.cnf
 COPY assets/pre-install.sql /docker-entrypoint-initdb.d/1_pre-install.sql
