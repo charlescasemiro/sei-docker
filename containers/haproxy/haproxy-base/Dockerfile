@@ -2,4 +2,4 @@
 # HAPROXY - apenas redundancia do repo original
 ################################################################################
 
-FROM dockercloud/haproxy
+FROM docker.io/haproxy:latest

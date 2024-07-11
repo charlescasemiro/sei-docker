@@ -1,4 +1,4 @@
-ARG IMAGEM_BASE=processoeletronico/haproxy-base:latest
+ARG IMAGEM_BASE=library/haproxy-base:latest
 
 FROM ${IMAGEM_BASE}
 
