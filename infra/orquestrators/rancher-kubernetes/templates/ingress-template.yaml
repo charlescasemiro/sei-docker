@@ -14,7 +14,6 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-name: PIINGRESSAFFINITY
     nginx.ingress.kubernetes.io/proxy-body-size: 200m
   name: ing-sei
-  namespace: ${KUBERNETES_NAMESPACE}
 spec:
   rules:
   - host: ${APP_HOST}

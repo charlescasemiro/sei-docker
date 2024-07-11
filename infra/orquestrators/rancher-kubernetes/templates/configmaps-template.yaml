@@ -103,4 +103,3 @@ data:
 kind: ConfigMap
 metadata:
   name: sei-app
-  namespace: "${KUBERNETES_NAMESPACE}"
