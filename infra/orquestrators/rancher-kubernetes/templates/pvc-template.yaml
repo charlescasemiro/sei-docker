@@ -9,7 +9,7 @@ spec:
   resources:
     requests:
       storage: 20Gi
-  storageClassName: ${KUBERNETES_PVC_STORAGECLASS}
+  storageClassName: nfs-client
 
 ---
 
@@ -24,7 +24,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ${KUBERNETES_PVC_STORAGECLASS}
+  storageClassName: nfs-client
 
 ---
   
@@ -39,7 +39,7 @@ spec:
   resources:
     requests:
       storage: 50Gi
-  storageClassName: ${KUBERNETES_PVC_STORAGECLASS}
+  storageClassName: nfs-client
 
 ---
 
@@ -54,7 +54,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ${KUBERNETES_PVC_STORAGECLASS}
+  storageClassName: nfs-client
 
 ---
 
@@ -69,4 +69,4 @@ spec:
   resources:
     requests:
       storage: 50Gi
-  storageClassName: ${KUBERNETES_PVC_STORAGECLASS}
+  storageClassName: nfs-client
