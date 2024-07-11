@@ -6,7 +6,7 @@ yum install python3 -y
 
 wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
 
-python get-pip.py
+python3 get-pip.py
 
 
 #Instalação Supervisor
