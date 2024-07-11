@@ -2,4 +2,4 @@
 # Postgres Imagem Alternativa - apenas redundancia do repo oficial
 ################################################################################
 
-FROM postgres:latest
+FROM docker.io/postgres:latest
