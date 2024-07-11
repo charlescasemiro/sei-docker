@@ -2,4 +2,4 @@
 # Mysql Oficial - apenas redundancia do repo oficial
 ################################################################################
 
-FROM docker.io/mysql:latest
+FROM docker.io/ubuntu/mysql:latest
