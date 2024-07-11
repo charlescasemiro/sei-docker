@@ -2,4 +2,4 @@
 # Postgres Imagem Alternativa - apenas redundancia do repo oficial
 ################################################################################
 
-FROM postgres:15
+FROM postgres:latest
