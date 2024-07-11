@@ -1,4 +1,4 @@
-ARG IMAGEM_BASE=library/traefik:latest
+ARG IMAGEM_BASE=library/traefik-base:latest
 
 FROM ${IMAGEM_BASE}
 

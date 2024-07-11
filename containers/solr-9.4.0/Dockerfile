@@ -4,7 +4,7 @@
 # Container preparado e configurado para uso em desenvolvimento e testes
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-rocky93:latest
+ARG IMAGEM_BASE=library/base-rocky93:latest
 
 FROM ${IMAGEM_BASE}
 

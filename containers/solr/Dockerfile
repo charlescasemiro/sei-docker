@@ -4,7 +4,7 @@
 # Container preparado e configurado para uso em desenvolvimento e testes
 ################################################################################
 
-ARG IMAGEM_BASE=processoeletronico/base-centos7:latest
+ARG IMAGEM_BASE=library/base-centos7:latest
 
 FROM ${IMAGEM_BASE}
 
