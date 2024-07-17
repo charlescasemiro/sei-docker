@@ -308,7 +308,7 @@ build-conteiner-generic: verificar-docker-registry verificar-parametro-imagemtmp
 build-conteiner-base-centos: ## construir imagem base-centos
 		@make IMAGEMTMP=base-ubi8 \
 		      IMAGEMTMP_VERSAO=$(DOCKER_CONTAINER_VERSAO_PRODUTO) \
-					IMAGEMTMP_PATH=base-centos \
+					IMAGEMTMP_PATH=base-ubi8 \
 					build-conteiner-generic
 
 
